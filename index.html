@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive VS Code portfolio with a Career Journey game - showcasing web development skills and professional experience">
+    <title>Hadar's Portfolio - Interactive VS Code Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e 0%, #2d2d30 100%);
+            color: #cccccc;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #3794ff;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .description {
+            font-size: 1.1em;
+            color: #cccccc;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .features {
+            background: rgba(37, 37, 38, 0.5);
+            border: 1px solid #3c3c3c;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .features h2 {
+            color: #ffffff;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .features ul {
+            list-style: none;
+            color: #cccccc;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            margin-left: 0;
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #4ec9b0;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #007acc;
+            color: white;
+            padding: 12px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin: 10px;
+        }
+        
+        .cta-button:hover {
+            background: #0098ff;
+        }
+        
+        .cta-secondary {
+            background: #3c3c3c;
+            color: #cccccc;
+        }
+        
+        .cta-secondary:hover {
+            background: #4c4c4c;
+        }
+        
+        .tech-stack {
+            margin-top: 30px;
+            color: #858585;
+            font-size: 0.95em;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #3c3c3c;
+            color: #858585;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Hadar's Portfolio</h1>
+        <p class="subtitle">Interactive VS Code Experience</p>
+        
+        <p class="description">
+            An immersive portfolio project featuring a custom-built IDE interface with a Career Journey game. 
+            This project showcases professional web development skills, including React, Next.js, TypeScript, 
+            and interactive UI design.
+        </p>
+        
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>VS Code-inspired IDE interface with dark/light theme support</li>
+                <li>Interactive Career Journey game with two levels</li>
+                <li>Terminal integration with custom commands</li>
+                <li>Dynamic file explorer with syntax highlighting</li>
+                <li>Responsive design with Tailwind CSS</li>
+                <li>Modern React hooks and state management</li>
+                <li>Toast notifications and modal dialogs</li>
+                <li>Professional UI/UX patterns</li>
+            </ul>
+        </div>
+        
+        <div>
+            <a href="/app" class="cta-button">Open Portfolio →</a>
+            <a href="https://github.com/hadarknafopholio/portfolio" class="cta-button cta-secondary" target="_blank">View on GitHub</a>
+        </div>
+        
+        <div class="tech-stack">
+            <p><strong>Tech Stack:</strong> React 19 • Next.js 16 • TypeScript • Tailwind CSS • Framer Motion</p>
+        </div>
+        
+        <div class="footer">
+            <p>📧 Contact: Hadarknafo@gmail.com</p>
+            <p>💼 Available for opportunities | Open to collaboration</p>
+        </div>
+    </div>
+</body>
+</html>

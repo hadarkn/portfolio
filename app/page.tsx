@@ -280,7 +280,7 @@ export default function Portfolio() {
   // Handle file clicks and trigger meltdown for the danger file
   const handleFileClick = (file: FileType) => {
     // Check if it's the danger file
-    if (file === "⚠️ DANGER_DO_NOT_OPEN.sh") {
+    if (file === "DANGER_DO_NOT_OPEN.sh") {
       triggerMeltdown()
       return
     }
@@ -519,11 +519,17 @@ export default function Portfolio() {
     switch (action) {
       case "new-interview":
         setTerminalOutput(["📧 Opening contact form..."])
-        setTimeout(() => window.open("mailto:your.email@example.com?subject=Interview Request", "_blank"), 500)
+        setTimeout(() => window.open("mailto:hadarknafo@gmail.com?subject=Interview Request", "_blank"), 500)
         break
       case "open-resume":
         showToastNotification("Downloading Resume.pdf...")
         setTerminalOutput(["📄 Resume.pdf downloading..."])
+        setTimeout(() => {
+          const link = document.createElement('a')
+          link.href = '/files/Hadar_Knafo_CV.pdf'
+          link.download = 'Hadar_Knafo_CV.pdf'
+          link.click()
+        }, 500)
         break
       case "save-favorite":
         showToastNotification("✓ Candidate saved to favorites!")
@@ -532,7 +538,7 @@ export default function Portfolio() {
         setTerminalOutput(["👋 Goodbye! Thanks for visiting my portfolio."])
         break
       case "copy-email":
-        navigator.clipboard.writeText("your.email@example.com")
+        navigator.clipboard.writeText("hadarknafo@gmail.com")
         showToastNotification("✓ Email copied to clipboard!")
         break
       case "select-all-skills":
@@ -595,7 +601,7 @@ export default function Portfolio() {
         setShowModal(true)
         break
       case "documentation":
-        window.open("https://github.com/yourusername", "_blank")
+        window.open("https://github.com/hadarknafo", "_blank")
         break
       case "check-updates":
         setTerminalOutput([
@@ -820,12 +826,21 @@ export default function Portfolio() {
       "✅ Build complete! Candidate is production-ready.",
       "💯 Performance Score: 95/100",
       "",
+      "📄 Downloading CV...",
       "SUCCESS_LINK",
     ]
 
     for (let i = 0; i < messages.length; i++) {
       await sleep(400)
       setTerminalOutput((prev) => [...prev, messages[i]])
+      
+      // Download CV when reaching the download message
+      if (messages[i] === "📄 Downloading CV...") {
+        const link = document.createElement('a')
+        link.href = '/files/Hadar_Knafo_CV.pdf'
+        link.download = 'Hadar_Knafo_CV.pdf'
+        link.click()
+      }
     }
 
     setIsTyping(false)
@@ -1135,18 +1150,21 @@ export default function Portfolio() {
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-fade-in-up">
-              Full-Stack Developer
+              Hadar Knafo
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
-              Building elegant solutions with modern technologies. Passionate about clean code, user experience, and
-              continuous learning.
+              Fourth-Year Software & Information Systems Engineering Student
+            </p>
+
+            <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-300">
+              Backend & Full-Stack Developer | Passionate about building modular systems and reliable APIs
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up delay-300">
               <button
                 onClick={() => {
-                  window.location.href = "mailto:your.email@example.com"
+                  window.location.href = "mailto:hadarknafo@gmail.com"
                 }}
                 className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/50"
               >
@@ -1161,18 +1179,14 @@ export default function Portfolio() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-up delay-400">
+            <div className="grid grid-cols-2 gap-8 max-w-xl mx-auto animate-fade-in-up delay-400">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">5+</div>
-                <div className="text-sm text-gray-400">Years Experience</div>
+                <div className="text-4xl font-bold text-blue-400 mb-2">85</div>
+                <div className="text-sm text-gray-400">GPA Average</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-sm text-gray-400">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-pink-400 mb-2">100%</div>
-                <div className="text-sm text-gray-400">Client Satisfaction</div>
+                <div className="text-4xl font-bold text-pink-400 mb-2">BGU</div>
+                <div className="text-sm text-gray-400">Ben-Gurion University</div>
               </div>
             </div>
           </div>
@@ -1187,14 +1201,14 @@ export default function Portfolio() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { name: "React", level: "Expert", color: "from-blue-400 to-cyan-400" },
-                { name: "TypeScript", level: "Advanced", color: "from-blue-600 to-blue-400" },
-                { name: "Node.js", level: "Expert", color: "from-green-400 to-emerald-400" },
-                { name: "Next.js", level: "Expert", color: "from-gray-400 to-gray-200" },
-                { name: "Python", level: "Advanced", color: "from-yellow-400 to-blue-400" },
-                { name: "SQL", level: "Advanced", color: "from-orange-400 to-red-400" },
-                { name: "Git", level: "Expert", color: "from-red-400 to-orange-400" },
-                { name: "AWS", level: "Intermediate", color: "from-yellow-600 to-orange-400" },
+                { name: "Java", level: "Proficient", color: "from-red-400 to-orange-400" },
+                { name: "JavaScript", level: "Proficient", color: "from-yellow-400 to-yellow-200" },
+                { name: "Node.js", level: "Proficient", color: "from-green-400 to-emerald-400" },
+                { name: "Python", level: "Proficient", color: "from-blue-400 to-blue-600" },
+                { name: "SQL", level: "Proficient", color: "from-orange-400 to-red-400" },
+                { name: "PostgreSQL", level: "Proficient", color: "from-blue-600 to-blue-800" },
+                { name: "Git", level: "Proficient", color: "from-red-500 to-orange-500" },
+                { name: "Vue.js", level: "Familiar", color: "from-green-500 to-teal-500" },
               ].map((skill, index) => (
                 <div
                   key={skill.name}
@@ -1224,29 +1238,23 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  title: "E-Commerce Platform",
+                  title: "Recipe Management Web Application",
                   description:
-                    "Full-stack e-commerce solution with real-time inventory management and payment processing",
-                  tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+                    "Full-stack web application for searching, saving, and managing recipes with backend logic, database integration, and external Spoonacular API consumption.",
+                  tech: ["JavaScript", "Node.js", "SQL", "REST APIs"],
                   gradient: "from-blue-500 to-purple-500",
                 },
                 {
-                  title: "Analytics Dashboard",
-                  description: "Real-time data visualization platform for business intelligence and reporting",
-                  tech: ["Next.js", "TypeScript", "D3.js", "Redis"],
+                  title: "Super-Lee Suppliers Management System",
+                  description: "Backend supplier management module handling agreements, delivery constraints, and pricing rules developed collaboratively in a team environment.",
+                  tech: ["Java", "OOP", "Git", "Data Structures"],
                   gradient: "from-purple-500 to-pink-500",
                 },
                 {
-                  title: "Social Media App",
-                  description: "Mobile-first social platform with real-time messaging and content sharing",
-                  tech: ["React Native", "Firebase", "Node.js"],
+                  title: "Academic Projects Portfolio",
+                  description: "Multiple projects focusing on algorithms, data structures, operating systems, and software development best practices.",
+                  tech: ["C", "C++", "C#", "Python"],
                   gradient: "from-pink-500 to-red-500",
-                },
-                {
-                  title: "AI Content Generator",
-                  description: "ML-powered content creation tool with natural language processing capabilities",
-                  tech: ["Python", "TensorFlow", "FastAPI", "React"],
-                  gradient: "from-green-500 to-teal-500",
                 },
               ].map((project, index) => (
                 <div
@@ -1283,14 +1291,19 @@ export default function Portfolio() {
         <section className="py-20 px-6 bg-black/20 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-              Let's Build Something Amazing
+              Let's Build Something Together
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            <p className="text-xl text-gray-300 mb-6">
+              Seeking a Software Engineering Internship where I can contribute to real-world systems, grow as a developer, and build strong engineering foundations.
             </p>
+            <div className="flex flex-col items-center gap-2 mb-8 text-gray-400">
+              <p>📧 hadarknafo@gmail.com</p>
+              <p>📱 054-3552316</p>
+              <p>🔗 linkedin.com/in/hadar-knafo</p>
+            </div>
             <button
               onClick={() => {
-                window.location.href = "mailto:your.email@example.com"
+                window.location.href = "mailto:hadarknafo@gmail.com"
               }}
               className="px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
             >
@@ -1493,7 +1506,7 @@ export default function Portfolio() {
               </p>
               <div className="pt-4 flex gap-2">
                 <Button
-                  onClick={() => window.open("mailto:your.email@example.com", "_blank")}
+                  onClick={() => window.open("mailto:hadarknafo@gmail.com", "_blank")}
                   className={`flex-1 h-8 text-[13px] ${isDarkMode ? "bg-[#0e639c] hover:bg-[#1177bb]" : "bg-[#0078d4] hover:bg-[#006cc1]"}`}
                 >
                   Contact Me
@@ -1792,32 +1805,17 @@ export default function Portfolio() {
                   </div>
                   <button
                     onClick={() => {
-                      const gradeData = "Course,Grade,Semester,Credits\nAdvanced Topics in Software Development,95,Fall 2024,4\nOperating Systems,92,Spring 2024,4\nAlgorithms,94,Fall 2023,4\nData Structures,91,Spring 2023,3\nWeb Development,96,Fall 2023,3\nDatabases,93,Spring 2024,4\nSoftware Design,94,Fall 2024,4"
-                      const blob = new Blob([gradeData], { type: 'text/csv;charset=utf-8;' })
                       const link = document.createElement('a')
-                      link.href = URL.createObjectURL(blob)
-                      link.download = 'Hadar_Knafo_Grades.csv'
+                      link.href = '/files/AcademicRecord.pdf'
+                      link.download = 'AcademicRecord.pdf'
                       link.click()
-                      showToastNotification('✓ Grades downloaded successfully!')
+                      showToastNotification('✓ Academic record downloaded successfully!')
                     }}
                     className={`w-full px-3 py-2 rounded text-left flex items-center gap-2 text-[13px] ${isDarkMode ? "bg-[#0e639c] hover:bg-[#1177bb]" : "bg-[#0078d4] hover:bg-[#006cc1]"} text-white transition-colors`}
                   >
                     <Download className="w-4 h-4" />
                     Download as CSV
                   </button>
-                </div>
-                <div className={`h-px ${isDarkMode ? "bg-[#3e3e42]" : "bg-[#d4d4d4]"}`} />
-                <div>
-                  <div className="text-[12px] font-semibold mb-2">GPA Summary</div>
-                  <div className={`text-[12px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"}`}>
-                    • Current GPA: <span className="font-semibold text-[#007acc]">93.6</span>
-                  </div>
-                  <div className={`text-[12px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"}`}>
-                    • Total Credits: <span className="font-semibold">26</span>
-                  </div>
-                  <div className={`text-[12px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"}`}>
-                    • Standing: <span className="font-semibold text-[#07a41e]">Good Academic Standing</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -2333,7 +2331,7 @@ export default function Portfolio() {
                       <span className="drop-shadow-[0_0_8px_rgba(78,201,176,0.8)]">
                         SUCCESS: Ready for Interview. {""}
                         <a
-                          href="mailto:your.email@example.com"
+                          href="mailto:hadarknafo@gmail.com"
                           className="underline hover:text-[#6ee7d7] transition-colors cursor-pointer"
                         >
                           Click here to Schedule

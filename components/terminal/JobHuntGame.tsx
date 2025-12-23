@@ -269,7 +269,7 @@ export function JobHuntGame({ isDarkMode, colors, onGameEnd, onLog }: SnakeGameP
             logOnce("║       🏆 PRODUCTION READY - Full Stack Achieved! 🏆     ║", "victory-3")
             logOnce("╚═══════════════════════════════════════════════════════════╝", "victory-4")
             logOnce("", "victory-5")
-            logOnce(`📧 Contact: Hadarknafo@gmail.com`, "victory-6")
+            logOnce(`📧 Contact: hadarknafo@gmail.com`, "victory-6")
             logOnce(`📱 Phone: 054-3552316`, "victory-7")
             logOnce(`🔗 LinkedIn: linkedin.com/in/hadar-knafo`, "victory-8")
             logOnce("", "victory-9")

@@ -157,7 +157,7 @@ export function WelcomeScreen({ isDarkMode, highlightedOption }: WelcomeScreenPr
           <div className="pt-8 mt-12 border-t" style={{ borderColor }}>
             <div className="text-xs text-center space-y-2" style={{ color: subtleText }}>
               <p>Welcome to VS Code - Let's get your workspace ready</p>
-              <p>📧 Hadarknafo@gmail.com | 🔗 linkedin.com/in/hadar-knafo</p>
+              <p>📧 hadarknafo@gmail.com | 🔗 linkedin.com/in/hadar-knafo</p>
             </div>
           </div>
         </div>

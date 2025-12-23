@@ -15,15 +15,15 @@ export async function triggerMeltdownSequence({
   setMeltdownPhase("panic")
 
   const errorMessages = [
-    "[FATAL] Segmentation fault in neural_network.py",
-    "[ERROR] GPU Memory Overflow during XLM-R model training",
-    "[CRITICAL] Infinite loop detected in Active Learning module",
-    "[SYSTEM] Data corruption imminent... Searching for solution...",
-    "[ERROR] Core dump initiated...",
-    "[CRITICAL] Stack overflow in hire_me.dll",
-    "[WARNING] Resume.pdf permissions: 777 (DANGEROUS!)",
-    "[ERROR] Segmentation fault: Talent overflow",
-    "[CRITICAL] Buffer exceeded: Skills too numerous",
+    "[CRITICAL] Git rebase stuck: interactive script won't exit",
+    "[ERROR] CI pipeline loop detected (re-running forever)",
+    "[FATAL] prod-deploy.sh exited with code 137 (OOM)",
+    "[PANIC] Database migration locked… awaiting manual intervention",
+    "[WARNING] Secrets.yaml committed with 777 permissions",
+    "[CRITICAL] Webpack memory leak - heap size exploding",
+    "[ERROR] API rate limit exceeded during build step",
+    "[ALERT] Infinite retry on npm install (network flapping)",
+    "[SYSTEM] Recovery mode engaged… searching for stable commit",
   ]
 
   // Rapidly type out error messages

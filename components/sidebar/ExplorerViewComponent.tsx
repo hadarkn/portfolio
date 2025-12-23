@@ -47,7 +47,7 @@ export function ExplorerView({
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  const rootFiles: FileType[] = ["settings.json", "⚠️ DANGER_DO_NOT_OPEN.sh"]
+  const rootFiles: FileType[] = ["settings.json", "DANGER_DO_NOT_OPEN.sh"]
   const srcFiles: FileType[] = files.filter((file) => !rootFiles.includes(file))
 
   const collapseAll = () => {

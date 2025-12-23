@@ -4,7 +4,7 @@ export type FileType =
   | "Projects.json"
   | "Experience.cpp"
   | "settings.json"
-  | "⚠️ DANGER_DO_NOT_OPEN.sh"
+  | "DANGER_DO_NOT_OPEN.sh"
   | "scratchpad.md"
 
 export type SidebarView = "explorer" | "extensions" | "search" | "source-control" | "run" | "account" | "database" | "service"

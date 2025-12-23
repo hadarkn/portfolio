@@ -6,7 +6,7 @@ export const files: FileType[] = [
   "Projects.json",
   "Experience.cpp",
   "settings.json",
-  "⚠️ DANGER_DO_NOT_OPEN.sh",
+  "DANGER_DO_NOT_OPEN.sh",
 ]
 
 export const fileContent: Record<FileType, string> = {
@@ -264,7 +264,7 @@ int main() {
     "documentation_style": "Comprehensive"
   }
 }`,
-  "⚠️ DANGER_DO_NOT_OPEN.sh": `#!/bin/bash
+  "DANGER_DO_NOT_OPEN.sh": `#!/bin/bash
 
 # This script is intentionally left blank.
 # Opening it triggers a simulated "meltdown" sequence.

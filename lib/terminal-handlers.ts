@@ -30,13 +30,15 @@ export function handleTerminalCommand({
         ...prev,
         "",
         "Available commands:",
-        "  whoami      - Get to know the developer",
-        "  skills      - List technical superpowers",
-        "  projects    - See my work in action",
-        "  contact     - How to reach me",
-        "  npm run dev - Play the Job Hunt Maze game! 🎮",
-        "  clear       - Clean the terminal screen",
-        "  coffee      - Check caffeine levels",
+        "  whoami        - Meet Hadar (now with extra caffeine)",
+        "  contact       - How to reach me",
+        "  go live       - Show the polished site version",
+        "  open resume   - Download my CV (PDF)",
+        "  open grades   - Download academic record",
+        "  npm run dev   - Play the Job Hunt Maze game! 🎮",
+        "  clear         - Clean the terminal screen",
+        "  coffee        - Check caffeine levels",
+        "  pwd           - Print portfolio working directory",
         "",
       ])
       break
@@ -45,9 +47,9 @@ export function handleTerminalCommand({
       setTerminalOutput((prev) => [
         ...prev,
         "",
-        "> A Full Stack Developer powered by caffeine and curiosity.",
-        "> I turn complex problems into elegant code.",
-        "> Version v2025.12 - Stable and ready for deployment.",
+        "> Hadar Knafo — Fourth-year Software & Information Systems Engineering student (BGU).",
+        "> Backend & Full-Stack, loves clean APIs, hates flaky CI.",
+        "> Runs on coffee, curiosity, and Git commits.",
         "",
       ])
       break
@@ -86,10 +88,9 @@ export function handleTerminalCommand({
         ...prev,
         "",
         "How to reach me:",
-        "  Email:    your.email@example.com",
-        "  LinkedIn: linkedin.com/in/yourprofile",
-        "  GitHub:   github.com/yourusername",
-        "  Twitter:  @yourhandle",
+        "  Email:    hadarknafo@gmail.com",
+        "  LinkedIn: linkedin.com/in/hadar-knafo",
+        "  GitHub:   github.com/hadarknafo",
         "",
       ])
       break
@@ -120,6 +121,51 @@ export function handleTerminalCommand({
       setTerminalOutput((prev) => [...prev, "🚀 Starting development server..."])
       setTerminalOutput((prev) => [...prev, "✓ Server ready on http://localhost:3000", ""])
       // Note: Game launch is handled in page.tsx via runNpmScript callback
+      break
+
+    case "go live":
+      setTerminalOutput((prev) => [
+        ...prev,
+        "",
+        "Deploy preview ready.",
+        "Switch to the polished site view via the Go Live button.",
+        "(Or click the green CTA in the UI.)",
+        "",
+      ])
+      break
+
+    case "open resume":
+      setTerminalOutput((prev) => [
+        ...prev,
+        "",
+        "📄 Downloading CV...",
+        "",
+      ])
+      if (typeof window !== "undefined") {
+        const link = document.createElement("a")
+        link.href = "/files/Hadar_Knafo_CV.pdf"
+        link.download = "Hadar_Knafo_CV.pdf"
+        link.click()
+      }
+      break
+
+    case "open grades":
+      setTerminalOutput((prev) => [
+        ...prev,
+        "",
+        "📑 Downloading academic record...",
+        "",
+      ])
+      if (typeof window !== "undefined") {
+        const link = document.createElement("a")
+        link.href = "/files/AcademicRecord.pdf"
+        link.download = "AcademicRecord.pdf"
+        link.click()
+      }
+      break
+
+    case "pwd":
+      setTerminalOutput((prev) => [...prev, "", "/home/guest/portfolio", ""])
       break
 
     default:

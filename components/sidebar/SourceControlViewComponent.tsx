@@ -44,47 +44,48 @@ export function SourceControlView({ isDirty, isDarkMode, colors, onCommit }: Sou
         )}
 
         <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"} mb-2`}>
-          Career Timeline - Commit History
+          Repository Status
         </div>
-        <div className={`flex gap-2 p-2 rounded ${colors.hover} cursor-pointer transition-colors`}>
+
+        <div className={`flex flex-col gap-2 p-2 rounded ${colors.hover}`}>
+          <div className="text-[13px] font-semibold">Branch: main</div>
+          <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"}`}>
+            Remote: github.com/hadarkn/portfolio
+          </div>
+          <div className={`text-[11px] ${isDarkMode ? "text-[#3794ff]" : "text-[#0078d4]"}`}>
+            Up to date with origin/main
+          </div>
+        </div>
+
+        <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"} mt-4 mb-2`}>
+          Recent commits
+        </div>
+
+        <div className={`flex gap-2 p-2 rounded ${colors.hover}`}>
           <div className="flex-shrink-0">
             <div className={`w-2 h-2 rounded-full mt-1 ${isDarkMode ? "bg-[#3794ff]" : "bg-[#0078d4]"}`}></div>
           </div>
           <div className="flex-1">
-            <div className="text-[13px] font-semibold">Crafted portfolio illustration system</div>
+            <div className="text-[13px] font-semibold">feat: update Go Live content</div>
             <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"} mt-1`}>
-              Built a cohesive visual language for personal branding assets
+              Added real resume links and contact email
             </div>
             <div className={`text-[11px] ${isDarkMode ? "text-[#3794ff]" : "text-[#0078d4]"} mt-1`}>
-              main • 2 months ago
+              main • just now
             </div>
           </div>
         </div>
-        <div className={`flex gap-2 p-2 rounded ${colors.hover} cursor-pointer transition-colors`}>
+        <div className={`flex gap-2 p-2 rounded ${colors.hover}`}>
           <div className="flex-shrink-0">
             <div className={`w-2 h-2 rounded-full mt-1 ${isDarkMode ? "bg-[#3794ff]" : "bg-[#0078d4]"}`}></div>
           </div>
           <div className="flex-1">
-            <div className="text-[13px] font-semibold">Developed ML Semester Project</div>
+            <div className="text-[13px] font-semibold">chore: dependency health</div>
             <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"} mt-1`}>
-              Built machine learning model for predictive analytics
+              Kept Next.js and UI libs aligned
             </div>
             <div className={`text-[11px] ${isDarkMode ? "text-[#3794ff]" : "text-[#0078d4]"} mt-1`}>
-              main • 4 months ago
-            </div>
-          </div>
-        </div>
-        <div className={`flex gap-2 p-2 rounded ${colors.hover} cursor-pointer transition-colors`}>
-          <div className="flex-shrink-0">
-            <div className={`w-2 h-2 rounded-full mt-1 ${isDarkMode ? "bg-[#3794ff]" : "bg-[#0078d4]"}`}></div>
-          </div>
-          <div className="flex-1">
-            <div className="text-[13px] font-semibold">Started Degree</div>
-            <div className={`text-[11px] ${isDarkMode ? "text-[#858585]" : "text-[#6e6e6e]"} mt-1`}>
-              Began Computer Science studies
-            </div>
-            <div className={`text-[11px] ${isDarkMode ? "text-[#3794ff]" : "text-[#0078d4]"} mt-1`}>
-              main • Oct 2025
+              main • 1 day ago
             </div>
           </div>
         </div>
